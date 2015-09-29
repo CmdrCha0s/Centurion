@@ -1,0 +1,16 @@
+if loggedIn && user.isAdmin
+
+else if loggedIn && !user.isAdmin
+  h3 You are not authorized to view this page.
+else
+  h3 You must log in to view this page.
+
+  form(class="form-signin" action="/admin/login" method="POST")
+    .form-control
+      label Username:
+      input(type="text" required name="username")
+    .form-control  
+      label Password:
+      input(type="password" required name="password")
+    .form-control
+      input(type="submit")

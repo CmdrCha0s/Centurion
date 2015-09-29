@@ -1,0 +1,12 @@
+//- includes/head.jade
+head
+  meta(http-equiv="X-UA-Compatible" content="IE=edge")
+  meta(name="viewport" content="width=device-width, initial-scale=1")
+  each val, index in meta
+    meta(name=index content=val)  
+  link(rel="icon" href="../../favicon.ico")
+  title #{config.application.title}
+  each val, index in config.scripts
+    script(src=val)
+  each val, index in config.stylesheets
+    link(rel='stylesheet', href=val)

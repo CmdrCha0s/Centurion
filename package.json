@@ -1,0 +1,14 @@
+{
+    "name": "noderp",
+    "version": "0.0.1",
+    "dependencies": {
+        "express": "~4.0.0",
+        "mariasql": "*",
+        "jade": "~1.3.0",
+        "bower": "*",
+        "body-parser": "*",
+        "cookie-parser": "*",
+        "express-session": "*",
+        "express-less": "*"
+    }
+}

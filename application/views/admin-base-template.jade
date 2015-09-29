@@ -1,0 +1,34 @@
+doctype html
+html
+  include ./admin/adminHead.jade
+  body
+    nav(class="navbar navbar-inverse navbar-fixed-top")
+      div(class="container-fluid admin-header")
+        div(class="navbar-header  admin-head-nav")
+          button(type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar")
+            span(class="sr-only"). Toggle navigation
+            span(class="icon-bar")
+            span(class="icon-bar")
+            span(class="icon-bar")
+
+          a(class="navbar-brand" href="/home"). #{config.application.title}
+
+        div(id="navbar admin-nav" class="navbar-collapse collapse")
+          ul(class="nav navbar-nav navbar-right")
+            li
+              a(href="#"). Dashboard
+            li
+              a(href="#"). Settings
+            li
+              a(href="#"). Help
+
+    div(class="container-fluid wrapper")
+      div(class="row")
+        div(class="col-sm-3 col-md-2 sidebar navigation")
+          include ./admin/admin-side-menu.jade
+        div(class="col-md-10 col-md-offset-2 content")
+          include ./admin/admin-content.jade
+
+    footer(class="col-md-10 col-md-offset-2 footer")
+      div(class="container")
+        p(class="text-muted right"). !{config.application.copy}

@@ -1,0 +1,5 @@
+if loggedIn && user.isAdmin
+  ul
+    each privilige, idx in user.adminPriviliges
+      li
+        a(href="admin/{privilige.url}"). {privilige.properName}
